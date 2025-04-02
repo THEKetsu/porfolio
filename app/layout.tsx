@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./components/Navbar/Navbar";
+import { AnimatePresence } from "framer-motion";
 
 export const metadata: Metadata = {
   title: "Quentin Portfolio",
@@ -16,7 +17,9 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <div className="container">
-        {children}
+          <AnimatePresence mode="wait">
+            {children}
+          </AnimatePresence>
         </div>
         <Navbar />
       </body>
