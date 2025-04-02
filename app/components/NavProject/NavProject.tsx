@@ -1,6 +1,8 @@
 'use client';
 import React, { useState } from 'react';
-import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { motion } from 'framer-motion';
 import Image
  from 'next/image';
@@ -59,12 +61,18 @@ const NavProject = () => {
     return (
         <div className="relative w-full h-full flex items-center justify-center">
             {/* Navigation Buttons */}
-            <Button 
-                variant="contained" 
+            <IconButton 
                 onClick={handlePrev}
-                className="absolute left-4 z-10">
-                {'<'}
-            </Button>
+                className="absolute left-4 z-10"
+                sx={{ 
+                    backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                    '&:hover': {
+                        backgroundColor: 'rgba(255, 255, 255, 0.9)'
+                    }
+                }}
+            >
+                <ChevronLeftIcon fontSize="large" />
+            </IconButton>
 
             {/* Projects Display */}
             <div className="flex items-center justify-center gap-4 overflow-hidden">
@@ -126,13 +134,18 @@ const NavProject = () => {
                     />
                 </motion.div>
             </div>
-            <Button 
-                variant="contained" 
+            <IconButton 
                 onClick={handleNext}
                 className="absolute right-4 z-10"
+                sx={{ 
+                    backgroundColor: 'rgba(255, 255, 255, 0.8)',
+                    '&:hover': {
+                        backgroundColor: 'rgba(255, 255, 255, 0.9)'
+                    }
+                }}
             >
-                {'>'}
-            </Button>
+                <ChevronRightIcon fontSize="large" />
+            </IconButton>
         </div>
     );
 }
