@@ -15,23 +15,23 @@ interface TimelineEvent {
 const timelineEvents: TimelineEvent[] = [
     {
         date: "2024",
-        title: "Développeur Full Stack",
+        title: "Product Owner for Cloud Solutions",
         company: "Mindflow",
         description: "Développement d'applications web avec Next.js et Node.js",
         logo: "/companies/mindflow.svg"
     },
     {
         date: "2023",
-        title: "Développeur Full Stack",
-        company: "Marine Nationale",
-        description: "Développement d'applications de cybersécurité",
-        logo: "/companies/marine.svg"
+        title: "Contrat Pro Développeur Logiciel",
+        company: "Thales Cybersecurity Digital & Identity",
+        description: "Veille technologique et développement d'applications de monitoring de chaine de production",
+        logo: "/companies/thales.svg"
     },
     {
         date: "2022",
-        title: "Développeur Full Stack",
-        company: "RCT",
-        description: "Développement d'une application de stratégie sportive",
+        title: "Stage développement Logiciel Cybersécurité",
+        company: "Thales System Telecommunications & Security", 
+        description: "Mise en place d'un logiciel de labellisation de données sensibles dans un environnement sécurisé",
         logo: "/companies/rct.svg"
     },
 ];
