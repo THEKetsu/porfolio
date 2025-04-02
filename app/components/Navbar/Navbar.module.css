@@ -1,0 +1,54 @@
+.navbar {
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 1;
+  backdrop-filter: blur(10px);
+  padding: 0.5rem;
+  border-radius: 40px;
+  backdrop-filter: blur(10px);
+  border-color: white;
+  border-width: 1px;
+  box-shadow: 0 0 10px white;
+}
+
+.navList {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+  padding: 0;
+  margin: 0;
+}
+
+.navItem {
+  display: flex;
+  align-items: center;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 40px;
+  transition: background 0.3s, transform 0.3s ease-in-out;
+  position: relative;
+}
+
+.navLink:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* Effet de glissement vers la droite/gauche */
+.navLink:active {
+  transform: translateX(30px);
+}
+
+.active {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateX(5px);
+}
+
+.navIcon {
+  margin-right: 0.5rem;
+}
