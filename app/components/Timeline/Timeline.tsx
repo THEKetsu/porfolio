@@ -18,21 +18,21 @@ const timelineEvents: TimelineEvent[] = [
         title: "Product Owner for Cloud Solutions",
         company: "Mindflow",
         description: "Développement d'applications web avec Next.js et Node.js",
-        logo: "/companies/mindflow.svg"
+        logo: "/portfolio/companies/mindflow.svg"
     },
     {
         date: "2023",
         title: "Contrat Pro Développeur Logiciel",
         company: "Thales Cybersecurity Digital & Identity",
         description: "Veille technologique et développement d'applications de monitoring de chaine de production",
-        logo: "/companies/thales.svg"
+        logo: "/portfolio/companies/thales.svg"
     },
     {
         date: "2022",
         title: "Stage développement Logiciel Cybersécurité",
         company: "Thales System Telecommunications & Security", 
         description: "Mise en place d'un logiciel de labellisation de données sensibles dans un environnement sécurisé",
-        logo: "/companies/rct.svg"
+        logo: "/portfolio/companies/rct.svg"
     },
 ];
 

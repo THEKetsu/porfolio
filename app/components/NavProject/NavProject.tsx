@@ -22,28 +22,28 @@ const NavProject = () => {
             id: 1,
             title: 'Strategy RCT',
             description: 'Projet qui a pour but de créer une application web pour la gestion des stratégies et scénarios de match de l\'équipe de RCT',
-            image: '/companies/rct.svg',
+            image: '/portfolio/companies/rct.svg',
             technologies: ['React', 'TypeScript']
         },
         {
             id: 2,
             title: 'BIFROST',
             description: 'This is a project',
-            image: '/companies/mindflow.svg',
+            image: '/portfolio/companies/mindflow.svg',
             technologies: ['React', 'TypeScript']
         },
         {
             id: 3,
             title: 'Project 3',
             description: 'This is a project',
-            image: '/companies/marine.svg',
+            image: '/portfolio/companies/marine.svg',
             technologies: ['React', 'TypeScript']
         },
         {
             id: 4,
             title: 'Project 4',
             description: 'This is a project',
-            image: '/companies/thales.svg',
+            image: '/portfolio/companies/thales.svg',
             technologies: ['React', 'TypeScript']
         },
     ];
