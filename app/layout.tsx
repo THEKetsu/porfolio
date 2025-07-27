@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./components/Navbar/Navbar";
+import Footer from "./components/Footer";
 import { AnimatePresence } from "framer-motion";
 
 export const metadata: Metadata = {
@@ -22,6 +23,7 @@ export default function RootLayout({
           </AnimatePresence>
         </div>
         <Navbar />
+        <Footer />
       </body>
     </html>
   );
