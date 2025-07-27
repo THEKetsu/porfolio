@@ -15,35 +15,37 @@ interface Project {
     technologies: string[];
 }
 
+const prefix = process.env.NODE_ENV === 'production' ? '/porfolio' : '';
+
 const NavProject = () => {
 
     const projects: Project[] = [  
         {
             id: 1,
             title: 'Strategy RCT',
-            description: 'Projet qui a pour but de créer une application web pour la gestion des stratégies et scénarios de match de l\'équipe de RCT',
-            image: '/portfolio/rct.svg',
+            description: "Projet qui a pour but de créer une application web pour la gestion des stratégies et scénarios de match de l'équipe de RCT",
+            image: `${prefix}/portfolio/rct.svg`,
             technologies: ['React', 'TypeScript']
         },
         {
             id: 2,
             title: 'BIFROST',
             description: 'This is a project',
-            image: '/portfolio/mindflow.svg',
+            image: `${prefix}/portfolio/mindflow.svg`,
             technologies: ['React', 'TypeScript']
         },
         {
             id: 3,
             title: 'Project 3',
             description: 'This is a project',
-            image: '/portfolio/marine.svg',
+            image: `${prefix}/portfolio/marine.svg`,
             technologies: ['React', 'TypeScript']
         },
         {
             id: 4,
             title: 'Project 4',
             description: 'This is a project',
-            image: '/portfolio/thales.svg',
+            image: `${prefix}/portfolio/thales.svg`,
             technologies: ['React', 'TypeScript']
         },
     ];
