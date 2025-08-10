@@ -3,40 +3,50 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import styles from './Timeline.module.css';
+import { useLanguage } from '../../../contexts/LanguageContext';
 
 interface TimelineEvent {
     date: string;
-    title: string;
-    company: string;
-    description: string;
+    titleKey: string;
+    companyKey: string;
+    descriptionKey: string;
     logo: string;
 }
 
 const timelineEvents: TimelineEvent[] = [
     {
+        date: "2024-2025",
+        titleKey: 'timeline.expert.title',
+        companyKey: 'timeline.expert.company',
+        descriptionKey: 'timeline.expert.description',
+        logo: "/portfolio/thales.svg"
+    },
+    {
         date: "2024",
-        title: "Product Owner for Cloud Solutions",
-        company: "Thales Cybersecurity Digital & Identity",
-        description: "DevSecOps & Product Owner pour des solutions Cloud comme une application de monitoring de chaines de production",
+        titleKey: 'timeline.po.title',
+        companyKey: 'timeline.po.company',
+        descriptionKey: 'timeline.po.description',
         logo: "/portfolio/thales.svg"
     },
     {
         date: "2023",
-        title: "Contrat Pro Développeur Logiciel",
-        company: "Thales Cybersecurity Digital & Identity",
-        description: "Veille technologique et développement d'applications de monitoring de chaine de production",
+        titleKey: 'timeline.dev.title',
+        companyKey: 'timeline.dev.company',
+        descriptionKey: 'timeline.dev.description',
         logo: "/portfolio/thales.svg"
     },
     {
         date: "2022",
-        title: "Stage développement Logiciel Cybersécurité",
-        company: "Thales System Telecommunications & Security", 
-        description: "Mise en place d'un logiciel de labellisation de données sensibles dans un environnement sécurisé",
+        titleKey: 'timeline.stage.title',
+        companyKey: 'timeline.stage.company',
+        descriptionKey: 'timeline.stage.description',
         logo: "/portfolio/thales.svg"
     },
 ];
 
 export default function Timeline() {
+    const { t } = useLanguage();
+    
     return (
         <div className={styles.timelineWrapper}>
             <motion.div 
@@ -65,12 +75,12 @@ export default function Timeline() {
                                         className={styles.companyLogo}
                                     />
                                     <div className={styles.headerText}>
-                                        <h3>{event.title}</h3>
+                                        <h3>{t(event.titleKey)}</h3>
                                         <span className={styles.date}>{event.date}</span>
                                     </div>
                                 </div>
-                                <span className={styles.company}>{event.company}</span>
-                                <p className={styles.description}>{event.description}</p>
+                                <span className={styles.company}>{t(event.companyKey)}</span>
+                                <p className={styles.description}>{t(event.descriptionKey)}</p>
                             </div>
                         </div>
                     ))}

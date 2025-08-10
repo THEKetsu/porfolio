@@ -1,14 +1,16 @@
 .navbar {
-  background: rgba(0, 0, 0, 0.5);
-  opacity: 1;
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(10px);
   padding: 0.5rem;
   border-radius: 40px;
-  backdrop-filter: blur(10px);
-  border-color: white;
-  border-width: 1px;
-  box-shadow: 0 0 10px white;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
   transition: all 0.3s ease-in-out;
+  z-index: 200;
 }
 
 .navbar:hover {
@@ -80,4 +82,42 @@
 
 .navLink:hover .navIcon {
   transform: scale(1.2);
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    position: static;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(10px);
+    border-radius: 20px 20px 0 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.3);
+    padding: 0.8rem 0;
+  }
+
+  .navList {
+    flex-direction: row;
+    gap: 0;
+  }
+
+  .navItem {
+    flex: 1;
+  }
+
+  .navLink {
+    flex-direction: column;
+    padding: 0.7rem 0.3rem;
+    font-size: 0.7rem;
+    min-height: auto;
+  }
+
+  .navIcon {
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .active {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+  }
 }

@@ -1,0 +1,338 @@
+.servicesContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    max-height: calc(100vh - 260px);
+    padding: 1rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    flex-shrink: 0;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: white;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #3b82f6, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
+}
+
+.header p {
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
+    max-width: 600px;
+    margin: 0 auto;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+}
+
+.servicesGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1.5rem;
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0.5rem;
+    /* Scroll stylisé */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(59, 130, 246, 0.8) rgba(255, 255, 255, 0.1);
+}
+
+/* Webkit scrollbar styling pour Services */
+.servicesGrid::-webkit-scrollbar {
+    width: 8px;
+}
+
+.servicesGrid::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.servicesGrid::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #3b82f6, #06b6d4);
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.servicesGrid::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #1d4ed8, #0891b2);
+}
+
+.serviceCard {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+    flex: 1 1 320px;
+    max-width: 380px;
+    min-width: 280px;
+    box-sizing: border-box;
+}
+
+.serviceCard:hover {
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+    transform: translateY(-5px);
+}
+
+.categoryBadge {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 1.5rem;
+    color: white;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    flex-shrink: 0;
+}
+
+.categoryIcon {
+    font-size: 1.2rem;
+}
+
+.serviceContent {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    padding: 1.5rem;
+    box-sizing: border-box;
+}
+
+.serviceContent h3 {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #1f2937;
+    margin-bottom: 0.8rem;
+    line-height: 1.3;
+}
+
+.description {
+    color: #6b7280;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+    margin-bottom: 1.5rem;
+    flex: 1;
+}
+
+.feature {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.8rem;
+    font-size: 0.9rem;
+    color: #4b5563;
+    line-height: 1.5;
+}
+
+.checkmark {
+    color: #10b981;
+    font-weight: bold;
+    font-size: 1rem;
+    flex-shrink: 0;
+    margin-top: 0.1rem;
+}
+
+.pricing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 1.2rem;
+    margin-top: auto;
+    flex-shrink: 0;
+}
+
+.price {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #1f2937;
+}
+
+.duration {
+    font-size: 0.85rem;
+    color: #6b7280;
+    font-style: italic;
+}
+
+.contactSection {
+    text-align: center;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 1.5rem 0.8rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.contactSection h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 1rem;
+}
+
+.contactSection p {
+    font-size: 1.1rem;
+    color: #cbd5e1;
+    margin-bottom: 2rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.contactButtons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contactBtn {
+    background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+    color: white;
+    padding: 0.8rem 1.8rem;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contactBtn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(59, 130, 246, 0.4);
+    background: linear-gradient(135deg, #1d4ed8, #1e40af);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .servicesContainer {
+        padding: 0.8rem;
+    }
+    
+    .header {
+        margin-bottom: 1.5rem;
+    }
+    
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .header p {
+        font-size: 1rem;
+    }
+    
+    .servicesGrid {
+        flex-direction: column;
+        gap: 1.2rem;
+    }
+    
+    .serviceCard {
+        flex: none;
+        max-width: none;
+        min-width: auto;
+    }
+    
+    .serviceContent {
+        padding: 1.2rem;
+    }
+    
+    .contactSection {
+        padding: 1.5rem 1rem;
+    }
+    
+    .contactButtons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .contactBtn {
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .servicesContainer {
+        padding: 0.6rem 0;
+    }
+    
+    .header h1 {
+        font-size: 1.5rem;
+    }
+    
+    .servicesGrid {
+        gap: 0.8rem;
+    }
+    
+    .serviceCard {
+        width: 100%;
+        max-width: 100%;
+    }
+    
+    .categoryBadge {
+        padding: 0.6rem 0.8rem;
+        font-size: 0.75rem;
+    }
+    
+    .serviceContent {
+        padding: 0.8rem;
+    }
+    
+    .serviceContent h3 {
+        font-size: 1rem;
+        word-wrap: break-word;
+    }
+    
+    .feature {
+        font-size: 0.75rem;
+    }
+    
+    .price {
+        font-size: 0.9rem;
+    }
+    
+    .contactSection {
+        padding: 1rem 0.3rem;
+    }
+    
+    .contactSection h2 {
+        font-size: 1.5rem;
+    }
+}

@@ -1,26 +1,30 @@
+'use client';
 import styles from './Home.module.css';
 import Image from 'next/image';
 import PageTransition from './components/PageTransition/PageTransition';
+import { useLanguage } from '../contexts/LanguageContext';
 
 export default function Home() {
+  const { t } = useLanguage();
+  
   return (
     <PageTransition>
       <div className={styles.container}>
         {/* Name + Title(job) + Description + Contact Button*/}
         <div className={styles.left}>
           <div className={styles.header}>
-            <h1 className={styles.name}>Quentin BENDER</h1> 
-            <h2 className={styles.title}>Software Engineer</h2>
+            <h1 className={styles.name}>{t('home.name')}</h1> 
+            <h2 className={styles.title}>{t('home.title')}</h2>
           </div>
           <div className={styles.middle}>
               <p className={styles.description}>
-                Ingénieur DevSecOps débutant, passionné par la cybersécurité et le développement web.
+                {t('home.description1')}
               </p>
               <p className={styles.description}>
-                Récemment diplômé en cybersécurité, je suis prêt à mettre mes compétences au service de vos projets innovants.
+                {t('home.description2')}
               </p>
           </div>
-        <button className={styles.contact}>Contact me</button>
+        <button className="btn-primary">{t('home.contact')}</button>
         </div>
         <div className={styles.right}>
           <Image

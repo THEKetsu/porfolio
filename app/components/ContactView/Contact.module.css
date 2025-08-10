@@ -1,27 +1,73 @@
 .contactWrapper {
-    width: 100%;
-    max-width: 32rem;
-    margin: 0 auto;
-    padding: 2rem 1rem;
     display: flex;
     flex-direction: column;
-    align-items: center;
+    height: 100%;
+    max-height: calc(100vh - 260px);
+    padding: 1rem;
+    box-sizing: border-box;
+    overflow: hidden;
+    position: relative;
 }
 
 .title {
-    font-size: clamp(1.5rem, 4vw, 2.2rem);
-    font-weight: 600;
+    font-size: 2.5rem;
+    font-weight: 800;
     color: white;
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
     text-align: center;
+    background: linear-gradient(135deg, #3b82f6, #06b6d4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    flex-shrink: 0;
+    letter-spacing: -0.02em;
+    line-height: 1.1;
 }
 
 .description {
-    color: rgba(255, 255, 255, 0.8);
+    font-size: 1.1rem;
+    color: rgba(255, 255, 255, 0.9);
     text-align: center;
     margin-bottom: 1.5rem;
-    font-size: 1rem;
-    max-width: 24rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    flex-shrink: 0;
+    font-weight: 400;
+    letter-spacing: 0.01em;
+}
+
+.scrollableContent {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    padding: 0.5rem;
+    /* Scroll stylisé */
+    scrollbar-width: thin;
+    scrollbar-color: rgba(59, 130, 246, 0.8) rgba(255, 255, 255, 0.1);
+}
+
+/* Webkit scrollbar styling pour Contact */
+.scrollableContent::-webkit-scrollbar {
+    width: 8px;
+}
+
+.scrollableContent::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
+
+.scrollableContent::-webkit-scrollbar-thumb {
+    background: linear-gradient(135deg, #3b82f6, #06b6d4);
+    border-radius: 4px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.scrollableContent::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(135deg, #1d4ed8, #0891b2);
 }
 
 .form {
@@ -29,6 +75,8 @@
     display: flex;
     flex-direction: column;
     gap: 1rem;
+    max-width: 500px;
+    margin: 0 auto;
 }
 
 .inputGroup {
@@ -37,63 +85,109 @@
     gap: 0.25rem;
 }
 
-.inputGroup label {
-    color: white;
-    font-size: 0.9rem;
-    font-weight: 500;
-}
 
 .inputGroup input,
 .inputGroup textarea {
     width: 100%;
-    padding: 0.5rem;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 0.5rem;
-    color: white;
+    padding: 0.8rem;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    color: #1f2937;
     font-size: 1rem;
     transition: all 0.3s ease;
+    box-sizing: border-box;
 }
 
 .inputGroup input:focus,
 .inputGroup textarea:focus {
     outline: none;
-    border-color: rgba(255, 255, 255, 0.5);
-    background: rgba(255, 255, 255, 0.15);
+    border-color: rgba(59, 130, 246, 0.5);
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+    background: rgba(255, 255, 255, 1);
 }
 
 .inputGroup input::placeholder,
 .inputGroup textarea::placeholder {
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(107, 114, 128, 0.7);
 }
 
 .submitButton {
-    margin-top: 0.5rem;
-    padding: 0.7rem 1.2rem;
-    background: rgb(138, 43, 226);
-    color: white;
-    border: none;
-    border-radius: 0.5rem;
-    font-size: 1rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: all 0.3s ease;
+    margin-top: 1rem;
 }
 
-.submitButton:hover {
-    background: rgb(148, 53, 236);
+
+.contactButtons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-bottom: 2rem;
 }
+
 
 @media (max-width: 768px) {
     .contactWrapper {
-        padding: 1rem 0.5rem;
+        max-height: calc(100vh - 280px);
+        padding: 0.8rem;
     }
-
+    
     .title {
-        font-size: 1.2rem;
+        font-size: 2rem;
     }
 
     .description {
-        font-size: 0.95rem;
+        font-size: 1rem;
+    }
+
+    .scrollableContent::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    .contactSection {
+        padding: 1.5rem 1rem;
+    }
+    
+    .contactButtons {
+        flex-direction: column;
+        gap: 1rem;
+    }
+    
+    .contactBtn {
+        min-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contactWrapper {
+        max-height: calc(100vh - 240px);
+        padding: 0.6rem;
+    }
+    
+    .title {
+        font-size: 1.5rem;
+    }
+
+    .description {
+        font-size: 0.9rem;
+    }
+
+    .scrollableContent::-webkit-scrollbar {
+        width: 4px;
+    }
+
+    .form {
+        max-width: 100%;
+    }
+
+    .inputGroup input,
+    .inputGroup textarea {
+        padding: 0.6rem;
+    }
+
+    .submitButton {
+        padding: 0.8rem 1.5rem;
+        font-size: 0.9rem;
     }
 } 

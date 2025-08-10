@@ -6,10 +6,16 @@ const repo = "porfolio"; // nom exact de ton repo
 const nextConfig: NextConfig = {
   output: 'export',
   images: {
-    unoptimized: true, // This disables image optimization for GitHub Pages
+    unoptimized: true,
   },
   basePath: isProd ? `/${repo}` : "",
   assetPrefix: isProd ? `/${repo}/` : "",
+  experimental: {
+    optimizePackageImports: ['framer-motion', 'react-icons']
+  },
+  compiler: {
+    removeConsole: isProd,
+  },
 };
 
 export default nextConfig;

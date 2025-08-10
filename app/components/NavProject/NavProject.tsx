@@ -4,8 +4,8 @@ import IconButton from '@mui/material/IconButton';
 import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
 import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import { motion } from 'framer-motion';
-import Image
- from 'next/image';
+import Image from 'next/image';
+import styles from './NavProject.module.css';
  
 interface Project {
     id: number;
@@ -61,41 +61,44 @@ const NavProject = () => {
     };
 
     return (
-        <div className="relative w-full h-full flex items-center justify-center">
+        <div className={styles.projectContainer}>
             {/* Navigation Buttons */}
             <IconButton 
                 onClick={handlePrev}
-                className="absolute left-4 z-10"
-                sx={{ 
-                    backgroundColor: 'rgba(255, 255, 255, 0.8)',
-                    '&:hover': {
-                        backgroundColor: 'rgba(255, 255, 255, 0.9)'
-                    }
-                }}
+                className={`${styles.navButton} ${styles.navButtonLeft}`}
             >
                 <ChevronLeftIcon fontSize="large" />
             </IconButton>
 
             {/* Projects Display */}
-            <div className="flex items-center justify-center gap-4 overflow-hidden">
+            <div className={styles.projectsDisplay}>
                 {/* Previous Project (smaller) */}
                 <motion.div
-                    className="w-64 opacity-50 scale-75"
+                    className={`w-64 opacity-50 scale-75 group relative cursor-pointer ${styles.projectItem}`}
                     initial={{ x: -100 }}
                     animate={{ x: 0 }}
+                    onClick={handlePrev}
                 >
-                    <Image 
-                        src={projects[(currentIndex - 1 + projects.length) % projects.length].image}
-                        alt="previous project"
-                        width={256}
-                        height={256}
-                        className="rounded-lg shadow-lg"
-                    />
+                    <div className="relative overflow-hidden rounded-lg shadow-lg">
+                        <Image 
+                            src={projects[(currentIndex - 1 + projects.length) % projects.length].image}
+                            alt="previous project"
+                            width={256}
+                            height={256}
+                            className="rounded-lg shadow-lg transition-all duration-300 group-hover:blur-sm"
+                        />
+                        <div className="absolute inset-0 bg-black bg-opacity-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-3 rounded-lg">
+                            <div className="text-center text-white">
+                                <h4 className="text-sm font-bold mb-1 drop-shadow-2xl text-shadow">{projects[(currentIndex - 1 + projects.length) % projects.length].title}</h4>
+                                <p className="text-xs leading-relaxed drop-shadow-2xl text-shadow">{projects[(currentIndex - 1 + projects.length) % projects.length].description}</p>
+                            </div>
+                        </div>
+                    </div>
                 </motion.div>
 
                 {/* Current Project (larger) */}
                 <motion.div
-                    className="w-96"
+                    className={`w-96 group relative ${styles.projectItem}`}
                     initial={{ scale: 0.8 }}
                     animate={{ scale: 1 }}
                     transition={{ duration: 3}}
@@ -106,45 +109,50 @@ const NavProject = () => {
                         flexDirection: 'column'
                      }}
                 >
-                    <Image 
-                        src={projects[currentIndex].image}
-                        alt="current project"
-                        className="rounded-lg shadow-lg"
-                        width={256}
-                        height={256}
-                    />
-                    <div className="mt-4 text-center">
-                        <h3 className="text-xl font-bold">{projects[currentIndex].title}</h3>
-                        <p>{projects[currentIndex].description}</p>
+                    <div className="relative overflow-hidden rounded-lg shadow-lg">
+                        <Image 
+                            src={projects[currentIndex].image}
+                            alt="current project"
+                            className="rounded-lg shadow-lg transition-all duration-300 group-hover:blur-sm"
+                            width={256}
+                            height={256}
+                        />
+                        <div className="absolute inset-0 bg-black bg-opacity-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 rounded-lg">
+                            <div className="text-center text-white">
+                                <h3 className="text-xl font-bold mb-2 drop-shadow-2xl text-shadow">{projects[currentIndex].title}</h3>
+                                <p className="text-sm leading-relaxed drop-shadow-2xl text-shadow">{projects[currentIndex].description}</p>
+                            </div>
+                        </div>
                     </div>
                 </motion.div>
 
                 {/* Next Project (smaller) */}
                 <motion.div
-                    className="w-64 opacity-50 scale-75"
+                    className={`w-64 opacity-50 scale-75 group relative cursor-pointer ${styles.projectItem}`}
                     initial={{ x: 100 }}
-                    animate={{ x: 0 ,
-             
-                    }}
+                    animate={{ x: 0 }}
+                    onClick={handleNext}
                 >
-                    <Image 
-                        src={projects[(currentIndex + 1) % projects.length].image}
-                        alt="next project"
-                        width={256}
-                        height={256}
-                        className="rounded-lg shadow-lg"
-                    />
+                    <div className="relative overflow-hidden rounded-lg shadow-lg">
+                        <Image 
+                            src={projects[(currentIndex + 1) % projects.length].image}
+                            alt="next project"
+                            width={256}
+                            height={256}
+                            className="rounded-lg shadow-lg transition-all duration-300 group-hover:blur-sm"
+                        />
+                        <div className="absolute inset-0 bg-black bg-opacity-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-3 rounded-lg">
+                            <div className="text-center text-white">
+                                <h4 className="text-sm font-bold mb-1 drop-shadow-2xl text-shadow">{projects[(currentIndex + 1) % projects.length].title}</h4>
+                                <p className="text-xs leading-relaxed drop-shadow-2xl text-shadow">{projects[(currentIndex + 1) % projects.length].description}</p>
+                            </div>
+                        </div>
+                    </div>
                 </motion.div>
             </div>
             <IconButton 
                 onClick={handleNext}
-                className="absolute right-4 z-10"
-                sx={{ 
-                    backgroundColor: 'rgba(255, 255, 255, 0.8)',
-                    '&:hover': {
-                        backgroundColor: 'rgba(255, 255, 255, 0.9)'
-                    }
-                }}
+                className={`${styles.navButton} ${styles.navButtonRight}`}
             >
                 <ChevronRightIcon fontSize="large" />
             </IconButton>
