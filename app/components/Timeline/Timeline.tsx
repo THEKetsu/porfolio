@@ -69,7 +69,7 @@ export default function Timeline() {
                                 <div className={styles.eventHeader}>
                                     <Image 
                                         src={event.logo} 
-                                        alt={event.company} 
+                                        alt={t(event.companyKey)} 
                                         width={48}
                                         height={48}
                                         className={styles.companyLogo}
