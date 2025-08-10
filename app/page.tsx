@@ -30,7 +30,7 @@ export default function Home() {
           <Image
             className={styles.image}
             src="https://avatars.githubusercontent.com/u/32210803?v=4"
-            alt="Quentin BENDER"
+            alt="Quentin BENDER - DevSecOps Engineer"
             width={500}
             height={500}
           />

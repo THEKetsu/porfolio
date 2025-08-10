@@ -9,12 +9,12 @@ import FloatingLanguageToggle from "./components/FloatingLanguageToggle/Floating
 
 export const metadata: Metadata = {
   title: "Quentin BENDER - Ingénieur DevSecOps & Cybersécurité",
-  description: "Portfolio de Quentin BENDER, Ingénieur DevSecOps spécialisé en cybersécurité, développement web et automatisation. Expertise en N8n, IA (Claude, ChatGPT) et solutions Cloud.",
-  keywords: "DevSecOps, Cybersécurité, Développeur, N8n, Automatisation, IA, Claude, ChatGPT, Portfolio",
+  description: "Portfolio professionnel de Quentin BENDER, Ingénieur DevSecOps spécialisé en cybersécurité, développement web et automatisation. Expertise N8n, IA (Claude, ChatGPT), solutions Cloud. Consultant freelance disponible.",
+  keywords: "DevSecOps, Cybersécurité, Développeur, N8n, Automatisation, IA, Claude, ChatGPT, Portfolio, Consultant, Freelance, Audit sécurité",
   authors: [{ name: "Quentin BENDER" }],
   openGraph: {
     title: "Quentin BENDER - Ingénieur DevSecOps & Cybersécurité",
-    description: "Portfolio professionnel - Expertise en DevSecOps, cybersécurité et automatisation",
+    description: "Expert DevSecOps freelance - Audit sécurité, automatisation N8n, solutions IA. Consultant technique disponible pour vos projets.",
     url: "https://quentinbender.github.io/porfolio",
     siteName: "Quentin BENDER Portfolio",
     images: [
@@ -56,7 +56,8 @@ export default function RootLayout({
               "url": "https://quentinbender.github.io/porfolio",
               "image": "https://avatars.githubusercontent.com/u/32210803?v=4",
               "sameAs": [
-                "https://github.com/quentinbender"
+                "https://github.com/quentinbender",
+                "https://www.linkedin.com/in/quentin-bender-8252241b8"
               ],
               "knowsAbout": [
                 "DevSecOps",
