@@ -24,7 +24,7 @@ const services: Service[] = [
             'services.audit.feature2',
             'services.audit.feature3'
         ],
-        price: "900€",
+        price: "Sur mesure",
         durationKey: 'services.audit.duration',
         category: 'security'
     },
@@ -37,7 +37,7 @@ const services: Service[] = [
             'services.automation.feature2',
             'services.automation.feature3'
         ],
-        price: "80€/h",
+        price: "Sur mesure",
         durationKey: 'services.automation.duration',
         category: 'automation'
     },
@@ -50,7 +50,7 @@ const services: Service[] = [
             'services.consulting.feature2',
             'services.consulting.feature3'
         ],
-        price: "100€/h",
+        price: "Sur mesure",
         durationKey: 'services.consulting.duration',
         category: 'consulting'
     }
