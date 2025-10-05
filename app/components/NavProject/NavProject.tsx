@@ -74,80 +74,80 @@ const NavProject = () => {
             <div className={styles.projectsDisplay}>
                 {/* Previous Project (smaller) */}
                 <motion.div
-                    className={`w-64 opacity-50 scale-75 group relative cursor-pointer ${styles.projectItem}`}
-                    initial={{ x: -100 }}
-                    animate={{ x: 0 }}
+                    className={`group relative ${styles.projectItem} ${styles.projectItemPrev}`}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 0.5 }}
                     onClick={handlePrev}
                 >
-                    <div className="relative overflow-hidden rounded-lg shadow-lg">
-                        <Image 
+                    <div className="relative overflow-hidden rounded-lg shadow-lg w-full h-full">
+                        <Image
                             src={projects[(currentIndex - 1 + projects.length) % projects.length].image}
                             alt="previous project"
                             width={256}
                             height={256}
-                            className="rounded-lg shadow-lg transition-all duration-300 group-hover:blur-sm"
+                            className="rounded-lg shadow-lg transition-all duration-300 group-hover:blur-sm w-full h-auto"
                         />
                         <div className="absolute inset-0 bg-black bg-opacity-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-3 rounded-lg">
                             <div className="text-center text-white">
-                                <h4 className="text-sm font-bold mb-1 drop-shadow-2xl text-shadow">{projects[(currentIndex - 1 + projects.length) % projects.length].title}</h4>
                                 <p className="text-xs leading-relaxed drop-shadow-2xl text-shadow">{projects[(currentIndex - 1 + projects.length) % projects.length].description}</p>
                             </div>
                         </div>
                     </div>
+                    <h4 className={styles.projectTitle}>{projects[(currentIndex - 1 + projects.length) % projects.length].title}</h4>
                 </motion.div>
 
                 {/* Current Project (larger) */}
                 <motion.div
-                    className={`w-96 group relative ${styles.projectItem}`}
-                    initial={{ scale: 0.8 }}
+                    className={`group relative ${styles.projectItem} ${styles.projectItemCurrent}`}
+                    initial={{ scale: 0.9 }}
                     animate={{ scale: 1 }}
-                    transition={{ duration: 3}}
-                    style={{ 
+                    transition={{ duration: 0.3 }}
+                    style={{
                         justifyContent: 'center',
                         alignItems: 'center',
                         display: 'flex',
                         flexDirection: 'column'
                      }}
                 >
-                    <div className="relative overflow-hidden rounded-lg shadow-lg">
-                        <Image 
+                    <div className="relative overflow-hidden rounded-lg shadow-lg w-full h-full">
+                        <Image
                             src={projects[currentIndex].image}
                             alt="current project"
-                            className="rounded-lg shadow-lg transition-all duration-300 group-hover:blur-sm"
+                            className="rounded-lg shadow-lg transition-all duration-300 group-hover:blur-sm w-full h-auto"
                             width={256}
                             height={256}
                         />
                         <div className="absolute inset-0 bg-black bg-opacity-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-4 rounded-lg">
                             <div className="text-center text-white">
-                                <h3 className="text-xl font-bold mb-2 drop-shadow-2xl text-shadow">{projects[currentIndex].title}</h3>
                                 <p className="text-sm leading-relaxed drop-shadow-2xl text-shadow">{projects[currentIndex].description}</p>
                             </div>
                         </div>
                     </div>
+                    <h3 className={`${styles.projectTitle} ${styles.projectTitleCurrent}`}>{projects[currentIndex].title}</h3>
                 </motion.div>
 
                 {/* Next Project (smaller) */}
                 <motion.div
-                    className={`w-64 opacity-50 scale-75 group relative cursor-pointer ${styles.projectItem}`}
-                    initial={{ x: 100 }}
-                    animate={{ x: 0 }}
+                    className={`group relative ${styles.projectItem} ${styles.projectItemNext}`}
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 0.5 }}
                     onClick={handleNext}
                 >
-                    <div className="relative overflow-hidden rounded-lg shadow-lg">
-                        <Image 
+                    <div className="relative overflow-hidden rounded-lg shadow-lg w-full h-full">
+                        <Image
                             src={projects[(currentIndex + 1) % projects.length].image}
                             alt="next project"
                             width={256}
                             height={256}
-                            className="rounded-lg shadow-lg transition-all duration-300 group-hover:blur-sm"
+                            className="rounded-lg shadow-lg transition-all duration-300 group-hover:blur-sm w-full h-auto"
                         />
                         <div className="absolute inset-0 bg-black bg-opacity-5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center p-3 rounded-lg">
                             <div className="text-center text-white">
-                                <h4 className="text-sm font-bold mb-1 drop-shadow-2xl text-shadow">{projects[(currentIndex + 1) % projects.length].title}</h4>
                                 <p className="text-xs leading-relaxed drop-shadow-2xl text-shadow">{projects[(currentIndex + 1) % projects.length].description}</p>
                             </div>
                         </div>
                     </div>
+                    <h4 className={styles.projectTitle}>{projects[(currentIndex + 1) % projects.length].title}</h4>
                 </motion.div>
             </div>
             <IconButton 

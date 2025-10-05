@@ -58,9 +58,9 @@ const translations = {
         'services.consulting.duration': 'Flexible',
         
         // Timeline
-        'timeline.expert.title': 'Expert Automatisation & IA',
-        'timeline.expert.company': 'Freelance',
-        'timeline.expert.description': 'Spécialisation N8n, IA (Claude/ChatGPT), optimisation workflows entreprise',
+        'timeline.expert.title': 'Ingénieur DevSecOps',
+        'timeline.expert.company': 'Thales',
+        'timeline.expert.description': 'DevSecOps, sécurisation infrastructure, automatisation CI/CD',
         'timeline.po.title': 'Product Owner Cloud',
         'timeline.po.company': 'Thales',
         'timeline.po.description': 'DevSecOps & PO solutions Cloud monitoring production',
@@ -69,7 +69,24 @@ const translations = {
         'timeline.dev.description': 'Applications monitoring, veille technologique',
         'timeline.stage.title': 'Stage Cybersécurité',
         'timeline.stage.company': 'Thales',
-        'timeline.stage.description': 'Labellisation données sensibles, environnement sécurisé'
+        'timeline.stage.description': 'Labellisation données sensibles, environnement sécurisé',
+
+        // Footer
+        'footer.about.title': 'À propos',
+        'footer.about.bio': 'Ingénieur DevSecOps passionné par la sécurité, l\'automatisation et l\'IA. Expertise en N8n, solutions Cloud et monitoring.',
+        'footer.about.company': 'Thales Cybersecurity',
+        'footer.links.title': 'Navigation',
+        'footer.links.home': 'Accueil',
+        'footer.links.career': 'Parcours',
+        'footer.links.projects': 'Projets',
+        'footer.links.services': 'Services',
+        'footer.links.contact': 'Contact',
+        'footer.contact.title': 'Contact',
+        'footer.contact.email': 'Email',
+        'footer.contact.linkedin': 'LinkedIn',
+        'footer.contact.github': 'GitHub',
+        'footer.copyright': '© {year} Quentin BENDER. Tous droits réservés.',
+        'footer.availability': 'Disponible pour des collaborations'
     },
     en: {
         // Navigation
@@ -119,9 +136,9 @@ const translations = {
         'services.consulting.duration': 'Flexible',
         
         // Timeline
-        'timeline.expert.title': 'Automation & AI Expert',
-        'timeline.expert.company': 'Freelance',
-        'timeline.expert.description': 'N8n specialization, AI (Claude/ChatGPT), enterprise workflow optimization',
+        'timeline.expert.title': 'DevSecOps Engineer',
+        'timeline.expert.company': 'Thales',
+        'timeline.expert.description': 'DevSecOps, infrastructure security, CI/CD automation',
         'timeline.po.title': 'Cloud Product Owner',
         'timeline.po.company': 'Thales',
         'timeline.po.description': 'DevSecOps & PO for Cloud production monitoring solutions',
@@ -130,7 +147,24 @@ const translations = {
         'timeline.dev.description': 'Monitoring applications, technology watch',
         'timeline.stage.title': 'Cybersecurity Intern',
         'timeline.stage.company': 'Thales',
-        'timeline.stage.description': 'Sensitive data labeling, secure environment'
+        'timeline.stage.description': 'Sensitive data labeling, secure environment',
+
+        // Footer
+        'footer.about.title': 'About',
+        'footer.about.bio': 'DevSecOps Engineer passionate about security, automation and AI. Expertise in N8n, Cloud solutions and monitoring.',
+        'footer.about.company': 'Thales Cybersecurity',
+        'footer.links.title': 'Quick Links',
+        'footer.links.home': 'Home',
+        'footer.links.career': 'Career',
+        'footer.links.projects': 'Projects',
+        'footer.links.services': 'Services',
+        'footer.links.contact': 'Contact',
+        'footer.contact.title': 'Get in Touch',
+        'footer.contact.email': 'Email',
+        'footer.contact.linkedin': 'LinkedIn',
+        'footer.contact.github': 'GitHub',
+        'footer.copyright': '© {year} Quentin BENDER. All rights reserved.',
+        'footer.availability': 'Available for collaborations'
     }
 };
 

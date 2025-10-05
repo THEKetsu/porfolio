@@ -13,7 +13,6 @@ export default function Project(){
     return (
         <PageTransition>
             <div className={styles.container}>
-                <p className="text-lg">Here are some of my projects.</p>
                 <NavProject />
             </div>
         </PageTransition>

@@ -13,34 +13,36 @@ interface TimelineEvent {
     logo: string;
 }
 
+const prefix = process.env.NODE_ENV === 'production' ? '/porfolio' : '';
+
 const timelineEvents: TimelineEvent[] = [
     {
-        date: "2024-2025",
+        date: "Oct. 2024 - Oct. 2025",
         titleKey: 'timeline.expert.title',
         companyKey: 'timeline.expert.company',
         descriptionKey: 'timeline.expert.description',
-        logo: "/portfolio/thales.svg"
+        logo: `${prefix}/thales.svg`
     },
     {
         date: "2024",
         titleKey: 'timeline.po.title',
         companyKey: 'timeline.po.company',
         descriptionKey: 'timeline.po.description',
-        logo: "/portfolio/thales.svg"
+        logo: `${prefix}/thales.svg`
     },
     {
         date: "2023",
         titleKey: 'timeline.dev.title',
         companyKey: 'timeline.dev.company',
         descriptionKey: 'timeline.dev.description',
-        logo: "/portfolio/thales.svg"
+        logo: `${prefix}/thales.svg`
     },
     {
         date: "2022",
         titleKey: 'timeline.stage.title',
         companyKey: 'timeline.stage.company',
         descriptionKey: 'timeline.stage.description',
-        logo: "/portfolio/thales.svg"
+        logo: `${prefix}/thales.svg`
     },
 ];
 
