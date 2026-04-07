@@ -17,28 +17,28 @@ const prefix = process.env.NODE_ENV === 'production' ? '/porfolio' : '';
 
 const timelineEvents: TimelineEvent[] = [
     {
-        date: "Oct. 2024 - Oct. 2025",
-        titleKey: 'timeline.expert.title',
-        companyKey: 'timeline.expert.company',
-        descriptionKey: 'timeline.expert.description',
+        date: "Oct. 2025 - Présent",
+        titleKey: 'timeline.cdi.title',
+        companyKey: 'timeline.cdi.company',
+        descriptionKey: 'timeline.cdi.description',
         logo: `${prefix}/thales.svg`
     },
     {
-        date: "2024",
+        date: "Oct. 2024 - Sept. 2025",
         titleKey: 'timeline.po.title',
         companyKey: 'timeline.po.company',
         descriptionKey: 'timeline.po.description',
         logo: `${prefix}/thales.svg`
     },
     {
-        date: "2023",
-        titleKey: 'timeline.dev.title',
-        companyKey: 'timeline.dev.company',
-        descriptionKey: 'timeline.dev.description',
+        date: "Oct. 2023 - Sept. 2024",
+        titleKey: 'timeline.apprenti.title',
+        companyKey: 'timeline.apprenti.company',
+        descriptionKey: 'timeline.apprenti.description',
         logo: `${prefix}/thales.svg`
     },
     {
-        date: "2022",
+        date: "Juin 2023 - Sept. 2023",
         titleKey: 'timeline.stage.title',
         companyKey: 'timeline.stage.company',
         descriptionKey: 'timeline.stage.description',

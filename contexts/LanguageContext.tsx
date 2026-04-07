@@ -20,14 +20,14 @@ const translations = {
         
         // Home
         'home.name': 'Quentin BENDER',
-        'home.title': 'DevSecOps Engineer',
-        'home.description1': 'Junior DevSecOps • Automatisation N8n • IA',
-        'home.description2': 'J\'optimise vos workflows et sécurise vos infrastructures.',
-        'home.contact': 'Contact me',
+        'home.title': 'Ingénieur DevSecOps',
+        'home.description1': 'DevSecOps @ Thales • Automatisation CI/CD • Solutions IA',
+        'home.description2': 'J\'optimise vos pipelines, sécurise vos infrastructures et intègre l\'IA dans vos workflows.',
+        'home.contact': 'Me contacter',
         
         // Contact
-        'contact.title': 'Démarrons votre projet',
-        'contact.subtitle': 'Expert DevSecOps • Automatisation • Développement',
+        'contact.title': 'Restons en contact',
+        'contact.subtitle': 'Ingénieur DevSecOps • Automatisation CI/CD • Solutions IA',
         'contact.email': 'Email direct',
         'contact.linkedin': 'LinkedIn',
         'contact.form.name': 'Nom & Prénom',
@@ -58,23 +58,23 @@ const translations = {
         'services.consulting.duration': 'Flexible',
         
         // Timeline
-        'timeline.expert.title': 'Ingénieur DevSecOps',
-        'timeline.expert.company': 'Thales',
-        'timeline.expert.description': 'DevSecOps, sécurisation infrastructure, automatisation CI/CD',
-        'timeline.po.title': 'Product Owner Cloud',
-        'timeline.po.company': 'Thales',
-        'timeline.po.description': 'DevSecOps & PO solutions Cloud monitoring production',
-        'timeline.dev.title': 'Développeur DevSecOps',
-        'timeline.dev.company': 'Thales',
-        'timeline.dev.description': 'Applications monitoring, veille technologique',
-        'timeline.stage.title': 'Stage Cybersécurité',
-        'timeline.stage.company': 'Thales',
-        'timeline.stage.description': 'Labellisation données sensibles, environnement sécurisé',
+        'timeline.cdi.title': 'Ingénieur DevSecOps (CDI)',
+        'timeline.cdi.company': 'Thales Cybersecurity Digital & Identity - Gémenos',
+        'timeline.cdi.description': 'Pilotage de l\'adoption DevSecOps au sein du Product Engineering. Exploration et évaluation d\'outils IA (assistants de code, chatbots, solutions RAG). Réduction des délais de livraison et amélioration de la qualité des livrables. Technologies: Python, GitLab CI, Datadog, Azure, Ansible, K8s',
+        'timeline.po.title': 'Product Owner for Cloud Solutions (CDD)',
+        'timeline.po.company': 'Thales - Gémenos',
+        'timeline.po.description': 'Introduction de pratiques DevSecOps modernes (Pipeline, Containerisation). Mise à profit d\'outils IA (RAG, Chatbot, Code Assistant) pour la documentation. Gestion d\'une solution d\'observabilité déployée sur 28 sites. Technologies: Python, GitLab, Datadog, Azure, Docker, MQTT, Ansible',
+        'timeline.apprenti.title': 'Apprenti Développement Logiciel (Alternance)',
+        'timeline.apprenti.company': 'Thales Digital Identity & Security - Gémenos',
+        'timeline.apprenti.description': 'Analyse comparative des courtiers MQTT et TSDB pour une solution d\'observabilité. Déploiement d\'un outil de surveillance en temps réel. Technologies: MQTT, Python, Datadog, TSDB, Docker, Ansible',
+        'timeline.stage.title': 'Ingénieur de développement en cybersécurité (Stage)',
+        'timeline.stage.company': 'Thales SIX CDS & ThereSIS - Palaiseau',
+        'timeline.stage.description': 'Développement d\'un système d\'étiquetage des données (Data-Centric Security conforme STANAG). Intégration de technologies de signature numérique avancées. Technologies: Rust, PKCS11, GitLab, Windows, GUI',
 
         // Footer
         'footer.about.title': 'À propos',
-        'footer.about.bio': 'Ingénieur DevSecOps passionné par la sécurité, l\'automatisation et l\'IA. Expertise en N8n, solutions Cloud et monitoring.',
-        'footer.about.company': 'Thales Cybersecurity',
+        'footer.about.bio': 'Ingénieur DevSecOps chez Thales, passionné par l\'automatisation CI/CD, la sécurité et l\'IA. Expert en solutions d\'observabilité et intégration de technologies RAG.',
+        'footer.about.company': 'Thales Cybersecurity Digital & Identity',
         'footer.links.title': 'Navigation',
         'footer.links.home': 'Accueil',
         'footer.links.career': 'Parcours',
@@ -86,7 +86,7 @@ const translations = {
         'footer.contact.linkedin': 'LinkedIn',
         'footer.contact.github': 'GitHub',
         'footer.copyright': '© {year} Quentin BENDER. Tous droits réservés.',
-        'footer.availability': 'Disponible pour des collaborations'
+        'footer.availability': 'Ingénieur DevSecOps @ Thales'
     },
     en: {
         // Navigation
@@ -99,13 +99,13 @@ const translations = {
         // Home
         'home.name': 'Quentin BENDER',
         'home.title': 'DevSecOps Engineer',
-        'home.description1': 'Junior DevSecOps • N8n Automation • AI',
-        'home.description2': 'I optimize your workflows and secure your infrastructure.',
+        'home.description1': 'DevSecOps @ Thales • CI/CD Automation • AI Solutions',
+        'home.description2': 'I optimize pipelines, secure infrastructures, and integrate AI into workflows.',
         'home.contact': 'Contact me',
         
         // Contact
-        'contact.title': 'Let\'s start your project',
-        'contact.subtitle': 'DevSecOps Expert • Automation • Development',
+        'contact.title': 'Let\'s stay in touch',
+        'contact.subtitle': 'DevSecOps Engineer • CI/CD Automation • AI Solutions',
         'contact.email': 'Direct email',
         'contact.linkedin': 'LinkedIn',
         'contact.form.name': 'Full Name',
@@ -136,23 +136,23 @@ const translations = {
         'services.consulting.duration': 'Flexible',
         
         // Timeline
-        'timeline.expert.title': 'DevSecOps Engineer',
-        'timeline.expert.company': 'Thales',
-        'timeline.expert.description': 'DevSecOps, infrastructure security, CI/CD automation',
-        'timeline.po.title': 'Cloud Product Owner',
-        'timeline.po.company': 'Thales',
-        'timeline.po.description': 'DevSecOps & PO for Cloud production monitoring solutions',
-        'timeline.dev.title': 'DevSecOps Developer',
-        'timeline.dev.company': 'Thales',
-        'timeline.dev.description': 'Monitoring applications, technology watch',
-        'timeline.stage.title': 'Cybersecurity Intern',
-        'timeline.stage.company': 'Thales',
-        'timeline.stage.description': 'Sensitive data labeling, secure environment',
+        'timeline.cdi.title': 'DevSecOps Engineer (Permanent)',
+        'timeline.cdi.company': 'Thales Cybersecurity Digital & Identity - Gémenos',
+        'timeline.cdi.description': 'Leading DevSecOps adoption within Product Engineering. Exploring and evaluating AI tools (code assistants, chatbots, RAG solutions). Reducing delivery times and improving deliverable quality. Technologies: Python, GitLab CI, Datadog, Azure, Ansible, K8s',
+        'timeline.po.title': 'Product Owner for Cloud Solutions (Fixed-term)',
+        'timeline.po.company': 'Thales - Gémenos',
+        'timeline.po.description': 'Introducing modern DevSecOps practices (Pipeline, Containerization). Leveraging AI-powered tools (RAG, Chatbot, Code Assistant) for documentation. Managing observability solution deployed across 28 sites. Technologies: Python, GitLab, Datadog, Azure, Docker, MQTT, Ansible',
+        'timeline.apprenti.title': 'Software Development Apprentice (Work-Study)',
+        'timeline.apprenti.company': 'Thales Digital Identity & Security - Gémenos',
+        'timeline.apprenti.description': 'Comparative analysis of MQTT brokers and TSDB for observability solution. Deploying real-time monitoring tools. Technologies: MQTT, Python, Datadog, TSDB, Docker, Ansible',
+        'timeline.stage.title': 'Cybersecurity Development Engineer (Internship)',
+        'timeline.stage.company': 'Thales SIX CDS & ThereSIS - Palaiseau',
+        'timeline.stage.description': 'Developing data labeling system (STANAG-compliant Data-Centric Security). Integrating advanced digital signature technologies. Technologies: Rust, PKCS11, GitLab, Windows, GUI',
 
         // Footer
         'footer.about.title': 'About',
-        'footer.about.bio': 'DevSecOps Engineer passionate about security, automation and AI. Expertise in N8n, Cloud solutions and monitoring.',
-        'footer.about.company': 'Thales Cybersecurity',
+        'footer.about.bio': 'DevSecOps Engineer at Thales, passionate about CI/CD automation, security and AI. Expert in observability solutions and RAG technology integration.',
+        'footer.about.company': 'Thales Cybersecurity Digital & Identity',
         'footer.links.title': 'Quick Links',
         'footer.links.home': 'Home',
         'footer.links.career': 'Career',
@@ -164,7 +164,7 @@ const translations = {
         'footer.contact.linkedin': 'LinkedIn',
         'footer.contact.github': 'GitHub',
         'footer.copyright': '© {year} Quentin BENDER. All rights reserved.',
-        'footer.availability': 'Available for collaborations'
+        'footer.availability': 'DevSecOps Engineer @ Thales'
     }
 };
 

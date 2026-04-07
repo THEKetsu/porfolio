@@ -16,7 +16,7 @@ const Navbar = () => {
           { href: "/", icon: <FaHome />, label: t('nav.home') },
           { href: "/career", icon: <FaBriefcase />, label: t('nav.career') },
           { href: "/projects", icon: <FaUser />, label: t('nav.projects') },
-          { href: "/ai-tools", icon: <FaCogs />, label: t('nav.services') },
+          // { href: "/ai-tools", icon: <FaCogs />, label: t('nav.services') },
           { href: "/contact", icon: <FaEnvelope />, label: t('nav.contact') },
         ].map((item) => (
           <li key={item.href} className={styles.navItem}>
